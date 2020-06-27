@@ -1,28 +1,55 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import VueMeta from "vue-meta";
+
+// Pages
+import Home from "../views/Home";
+import About from "../views/About";
+import Projects from "../views/Projects";
+import Contact from "../views/Contact";
+import Ramblings from "../views/Ramblings";
+import InvalidPage from "../views/InvalidPage.vue";
 
 Vue.use(VueRouter);
+Vue.use(VueMeta, {
+    refreshOnceOnNavigation: true
+});
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+    {
+        path: "/",
+        name: "Home",
+        component: Home
+    },
+    {
+        path: "/about",
+        name: "About",
+        component: About
+    },
+    {
+        path: "/projects",
+        name: "Projects",
+        component: Projects
+    },
+    {
+        path: "/contact",
+        name: "Contact",
+        component: Contact
+    },
+    {
+        path: "/ramblings",
+        name: "Ramblings",
+        component: Ramblings
+    },
+    {
+        path: "*",
+        component: InvalidPage
+    }
 ];
 
 const router = new VueRouter({
-  routes
+    mode: "history",
+    routes
 });
 
 export default router;
