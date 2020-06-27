@@ -1,6 +1,7 @@
 <template>
-    <div class="index-wrapper">
+    <div class="wrapper-div index-wrapper">
         <router-link to="/projects">Projects</router-link>
+        </div>
     </div>
 </template>
 

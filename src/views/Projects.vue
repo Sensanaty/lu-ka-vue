@@ -1,5 +1,5 @@
 <template>
-    <div class="projects">
+    <div class="wrapper-div projects-wrapper">
         <img alt="Vue logo" src="../assets/logo.png" />
         <div>Projects</div>
     </div>
