@@ -1,14 +1,14 @@
 <template>
-    <div class="wrapper-div about-wrapper">
+    <div class="wrapper-div projects-wrapper">
         <img alt="Vue logo" src="../assets/logo.png" />
-        <div>About</div>
+        <div>Projects</div>
     </div>
 </template>
 
 <script>
     export default {
         metaInfo: {
-            title: "L U K A | About"
+            title: "L U K A | Projects"
         }
     };
 </script>
