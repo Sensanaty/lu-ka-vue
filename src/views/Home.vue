@@ -140,4 +140,31 @@
             grid-area: linkA;
         }
     }
+
+    @media screen and (max-width: 500px) {
+        .box-letter {
+            font-size: 12vh;
+            align-self: start;
+        }
+
+        .box-top-left {
+            grid-template-columns: 3fr 1fr 100px;
+            grid-template-rows: 1fr 1fr 100px;
+        }
+
+        .box-top-right {
+            grid-template-columns: 100px 1fr 3fr;
+            grid-template-rows: 1fr 1fr 100px;
+        }
+
+        .box-bottom-left {
+            grid-template-columns: 3fr 1fr 100px;
+            grid-template-rows: 100px 1fr 1fr;
+        }
+
+        .box-bottom-right {
+            grid-template-columns: 100px 1fr 3fr;
+            grid-template-rows: 100px 1fr 1fr;
+        }
+    }
 </style>
