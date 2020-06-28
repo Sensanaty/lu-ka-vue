@@ -14,7 +14,7 @@
         </div>
         <div class="index-box box-bottom-right black-out">
             <div class="box-letter letter-a">A</div>
-            <router-link class="box-link white-out" to="/rambling">RAMBLING</router-link>
+            <router-link class="box-link white-out" to="/rambles">RAMBLES</router-link>
         </div>
     </div>
 </template>

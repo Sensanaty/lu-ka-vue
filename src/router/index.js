@@ -7,7 +7,7 @@ import Home from "../views/Home";
 import About from "../views/About";
 import Projects from "../views/Projects";
 import Contact from "../views/Contact";
-import Rambling from "../views/Rambling";
+import Rambles from "../views/Rambles";
 import InvalidPage from "../views/InvalidPage";
 
 Vue.use(VueRouter);
@@ -37,9 +37,9 @@ const routes = [
         component: Contact
     },
     {
-        path: "/rambling",
-        name: "Rambling",
-        component: Rambling
+        path: "/rambles",
+        name: "Rambles",
+        component: Rambles
     },
     {
         path: "*",
