@@ -103,6 +103,10 @@
             background: lighten($main-color, 10);
         }
 
+        &:active {
+            background: lighten($main-color, 20);
+        }
+
         &.name {
             font-size: calc(60px + 2vmin);
             letter-spacing: 10px;
