@@ -2,27 +2,19 @@
     <div class="wrapper-div index-wrapper">
         <div class="index-box box-top-left black-out">
             <div class="box-letter letter-l">L</div>
-            <router-link class="box-link white-out" to="/about"
-                >ABOUT</router-link
-            >
+            <router-link class="box-link white-out" to="/about">ABOUT</router-link>
         </div>
         <div class="index-box box-top-right white-out">
             <div class="box-letter letter-u">U</div>
-            <router-link class="box-link black-out" to="/projects"
-                >PROJECTS</router-link
-            >
+            <router-link class="box-link black-out" to="/projects">PROJECTS</router-link>
         </div>
         <div class="index-box box-bottom-left white-out">
             <div class="box-letter letter-k">K</div>
-            <router-link class="box-link black-out" to="/contact"
-                >CONTACT</router-link
-            >
+            <router-link class="box-link black-out" to="/contact">CONTACT</router-link>
         </div>
         <div class="index-box box-bottom-right black-out">
             <div class="box-letter letter-a">A</div>
-            <router-link class="box-link white-out" to="/rambling"
-                >RAMBLING</router-link
-            >
+            <router-link class="box-link white-out" to="/rambling">RAMBLING</router-link>
         </div>
     </div>
 </template>
