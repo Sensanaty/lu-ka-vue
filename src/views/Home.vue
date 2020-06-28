@@ -2,27 +2,19 @@
     <div class="wrapper-div index-wrapper">
         <div class="index-box box-top-left black-out">
             <div class="box-letter letter-l">L</div>
-            <router-link class="box-link white-out" to="/about"
-                >ABOUT</router-link
-            >
+            <router-link class="box-link white-out" to="/about">ABOUT</router-link>
         </div>
         <div class="index-box box-top-right white-out">
             <div class="box-letter letter-u">U</div>
-            <router-link class="box-link black-out" to="/projects"
-                >PROJECTS</router-link
-            >
+            <router-link class="box-link black-out" to="/projects">PROJECTS</router-link>
         </div>
         <div class="index-box box-bottom-left white-out">
             <div class="box-letter letter-k">K</div>
-            <router-link class="box-link black-out" to="/contact"
-                >CONTACT</router-link
-            >
+            <router-link class="box-link black-out" to="/contact">CONTACT</router-link>
         </div>
         <div class="index-box box-bottom-right black-out">
             <div class="box-letter letter-a">A</div>
-            <router-link class="box-link white-out" to="/rambling"
-                >RAMBLING</router-link
-            >
+            <router-link class="box-link white-out" to="/rambling">RAMBLING</router-link>
         </div>
     </div>
 </template>
@@ -46,12 +38,14 @@
         height: 100%;
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
+        user-select: none;
     }
 
     .white-out {
         background: $secondary-color;
         color: $main-color;
     }
+
     .black-out {
         background: $main-color;
         color: $secondary-color;
@@ -61,6 +55,28 @@
         font-size: 16vh;
         line-height: 1;
         align-self: end;
+    }
+
+    .box-link {
+        transition: background ease-in-out 150ms;
+
+        &.white-out {
+            &:hover {
+                background: darken($secondary-color, 15);
+            }
+            &:active {
+                background: darken($secondary-color, 25);
+            }
+        }
+
+        &.black-out {
+            &:hover {
+                background: lighten($main-color, 15);
+            }
+            &:active {
+                background: lighten($main-color, 25);
+            }
+        }
     }
 
     .index-box {
@@ -137,6 +153,7 @@
         .letter-a {
             grid-area: letterA;
         }
+
         .box-link {
             grid-area: linkA;
         }
@@ -150,6 +167,7 @@
         .box-top-left {
             grid-template-columns: 3fr 1fr 100px;
             grid-template-rows: 1fr 1fr 100px;
+
             .box-letter {
                 align-self: center;
             }
@@ -158,6 +176,7 @@
         .box-top-right {
             grid-template-columns: 100px 1fr 3fr;
             grid-template-rows: 1fr 1fr 100px;
+
             .box-letter {
                 align-self: center;
             }
