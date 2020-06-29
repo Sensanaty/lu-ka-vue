@@ -1,14 +1,20 @@
 <template>
     <div class="wrapper-div contact-wrapper">
-        <img alt="Vue logo" src="../assets/logo.png" />
-        <div>Contact</div>
-    </div>
+        <div class="navlink-wrapper">
+            <router-link class="link-box" to="/about">ABOUT</router-link>
+            <router-link class="link-box" to="/projects">PROJECTS</router-link>
+            <router-link class="link-box" to="/">LUKA</router-link>
+            <router-link class="link-box" to="/contact">CONTACT</router-link>
+            <router-link class="link-box" to="/rambles">RAMBLES</router-link>
+        </div>
         <div class="social-wrapper">
             <div class="icon-wrapper"><EmailIcon class="email icon" height="100%" width="100%" /></div>
             <div class="icon-wrapper"><GithubIcon class="github icon" height="100%" width="100%" /></div>
             <div class="icon-wrapper"><LinkedinIcon class="linkedin icon" height="100%" width="100%" /></div>
             <div class="icon-wrapper"><PhoneIcon class="phone icon" height="100%" width="100%" /></div>
         </div>
+        <div class="form-wrapper"></div>
+    </div>
 </template>
 
 <script>
