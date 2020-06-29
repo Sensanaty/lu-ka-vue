@@ -270,7 +270,7 @@
 
     @media screen and (max-width: 505px) {
         .navigation-text {
-            font-size: calc(19px + 1vmin);
+            font-size: calc(21px + 1vmin);
         }
 
         .greeting-subheader {
@@ -281,6 +281,12 @@
     @media screen and (max-width: 433px) {
         .greeting-subheader {
             font-size: calc(25px + 1vmin);
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .navigation-text {
+            font-size: calc(19px + 1vmin);
         }
     }
 
