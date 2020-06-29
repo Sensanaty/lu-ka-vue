@@ -7,8 +7,11 @@
 
 <script>
     export default {
+        name: "Contact",
         metaInfo: {
-            title: "L U K A | Contact"
+            title: "L U K A | CONTACT",
+            description: "The contact details of Luka Salevic. Feel free to send me an email about anything!"
+        },
         }
     };
 </script>
