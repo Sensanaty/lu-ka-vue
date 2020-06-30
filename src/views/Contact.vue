@@ -1,11 +1,11 @@
 <template>
     <div class="wrapper-div contact-wrapper">
         <div class="navlink-wrapper">
-            <router-link class="link-box" to="/about">ABOUT</router-link>
-            <router-link class="link-box" to="/projects">PROJECTS</router-link>
-            <router-link class="link-box" to="/">LUKA</router-link>
-            <router-link class="link-box" to="/contact">CONTACT</router-link>
-            <router-link class="link-box" to="/rambles">RAMBLES</router-link>
+            <ButtonLink url="/about" text="ABOUT" />
+            <ButtonLink url="/projects" text="PROJECTS" />
+            <ButtonLink url="/" text="LUKA" />
+            <ButtonLink url="/contact" text="CONTACT" />
+            <ButtonLink url="/rambles" text="RAMBLES" />
         </div>
         <div class="social-wrapper">
             <div class="icon-wrapper"><EmailIcon class="email icon" height="100%" width="100%" /></div>
@@ -22,6 +22,7 @@
     import GithubIcon from "@/assets/github.svg";
     import LinkedinIcon from "@/assets/linkedin.svg";
     import PhoneIcon from "@/assets/phone.svg";
+    import ButtonLink from "@/components/ButtonLink";
 
     export default {
         name: "Contact",
@@ -33,7 +34,8 @@
             EmailIcon,
             GithubIcon,
             LinkedinIcon,
-            PhoneIcon
+            PhoneIcon,
+            ButtonLink
         }
     };
 </script>
