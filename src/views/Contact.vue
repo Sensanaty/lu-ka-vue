@@ -8,21 +8,30 @@
             <ButtonLink url="/rambles" text="RAMBLES" />
         </div>
         <div class="social-wrapper">
-            <div class="icon-wrapper"><EmailIcon class="email icon" height="100%" width="100%" /></div>
-            <div class="icon-wrapper"><GithubIcon class="github icon" height="100%" width="100%" /></div>
-            <div class="icon-wrapper"><LinkedinIcon class="linkedin icon" height="100%" width="100%" /></div>
-            <div class="icon-wrapper"><PhoneIcon class="phone icon" height="100%" width="100%" /></div>
+            <div class="social-details">
+                <a href="#" target="_blank" class="icon-link email-link">
+                    <font-awesome-icon icon="envelope" />
+                </a>
+                <a href="https://github.com/Sensanaty" target="_blank" class="icon-link github">
+                    <font-awesome-icon :icon="['fab', 'github']" />
+                </a>
+                <a href="https://linkedin.com/in/LukaSalevic" target="_blank" class="icon-link linkedin">
+                    <font-awesome-icon :icon="['fab', 'linkedin-in']" />
+                </a>
+            </div>
         </div>
-        <div class="form-wrapper"></div>
-    </div>
 </template>
 
 <script>
-    import EmailIcon from "@/assets/email.svg";
-    import GithubIcon from "@/assets/github.svg";
-    import LinkedinIcon from "@/assets/linkedin.svg";
-    import PhoneIcon from "@/assets/phone.svg";
+    import Vue from "vue";
+    import { library } from "@fortawesome/fontawesome-svg-core";
+    import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+    import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+    import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
     import ButtonLink from "@/components/ButtonLink";
+
+    library.add(faEnvelope, faGithub, faLinkedinIn);
+    Vue.component("font-awesome-icon", FontAwesomeIcon);
 
     export default {
         name: "Contact",
