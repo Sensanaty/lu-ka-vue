@@ -19,15 +19,17 @@
 
 <style scoped lang="scss">
     .navbox {
+        font-family: "Open Sans", sans-serif;
         color: $highlight-color;
         background: lighten($main-color, 5);
         transition: all ease-in-out 100ms;
         transition-property: border-radius, background;
         font-weight: 600;
-        padding: 3px 15px;
+        padding: 5px 15px;
+        line-height: 1;
 
         &:hover {
-            border-radius: 7px;
+            border-radius: 4px;
             background: lighten($main-color, 10);
         }
 
