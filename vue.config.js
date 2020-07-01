@@ -1,4 +1,5 @@
 module.exports = {
+    productionSourceMap: false,
     chainWebpack: config => {
         const svgRule = config.module.rule("svg");
 
@@ -12,6 +13,7 @@ module.exports = {
             .loader("vue-svg-loader");
     },
     css: {
+        sourceMap: true,
         loaderOptions: {
             sass: {
                 prependData: `@import "@/styles/_colors.scss";`
