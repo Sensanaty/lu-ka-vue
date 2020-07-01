@@ -16,3 +16,7 @@ body, #app {
     background: $main-color;
     color: $secondary-color;
 }
+
+.router-link-exact-active {
+    border: 1px solid darken($highlight-color, 30);
+}
