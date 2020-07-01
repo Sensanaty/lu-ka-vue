@@ -1,45 +1,39 @@
 <template>
     <div class="wrapper-div about-wrapper">
         <div class="greeting-div">
-            <h1 class="greeting-header">Hi, I'm <router-link to="/" class="name navbox">LUKA</router-link></h1>
+            <h1 class="greeting-header">Hi, I'm <ButtonLink class="name" url="/" text="LUKA" /></h1>
             <h2 class="greeting-subheader">A Fullstack Web Developer</h2>
         </div>
 
         <div class="navigation-div responsive-small">
-            <p class="navigation-text">
-                Check out my
-                <router-link to="/projects" class="inline navbox">PROJECTS</router-link>
-            </p>
-            <p class="navigation-text">
-                Get in
-                <router-link to="/contact" class="inline navbox">CONTACT</router-link>
-            </p>
-            <p class="navigation-text">
-                Check out my
-                <router-link to="/rambles" class="inline navbox">RAMBLES</router-link>
-            </p>
+            <p class="navigation-text">Check out my <ButtonLink class="inline" url="/projects" text="PROJECTS" /></p>
+            <p class="navigation-text">Get in <ButtonLink class="inline" url="/contact" text="CONTACT" /></p>
+            <p class="navigation-text">Check out my <ButtonLink class="inline" url="/rambles" text="RAMBLES" /></p>
         </div>
 
         <div class="navigation-div responsive-large">
             <p class="navigation-text">
                 Want to see what I've been working on lately? Check out my
-                <router-link to="/projects" class="inline navbox">PROJECTS</router-link>
+                <ButtonLink class="inline" url="/projects" text="PROJECTS" />
             </p>
             <p class="navigation-text">
                 Want to get in touch with me? Get in
-                <router-link to="/contact" class="inline navbox">CONTACT</router-link>
+                <ButtonLink class="inline" url="/contact" text="CONTACT" />
             </p>
             <p class="navigation-text">
                 I like to write down my thoughts as I make things. Check out my
-                <router-link to="/rambles" class="inline navbox">RAMBLES</router-link>
+                <ButtonLink class="inline" url="/rambles" text="RAMBLES" />
             </p>
         </div>
     </div>
 </template>
 
 <script>
+    import ButtonLink from "@/components/ButtonLink";
+
     export default {
         name: "About",
+        components: { ButtonLink },
         metaInfo: {
             title: "L U K A | ABOUT"
         }
@@ -55,6 +49,20 @@
         grid-template-areas:
             "greeting ."
             "navigation navigation";
+
+        .name {
+            font-size: calc(60px + 2vmin);
+            letter-spacing: 10px;
+            font-family: "Roboto", sans-serif;
+            padding: 0 15px;
+            margin-left: 5px;
+        }
+
+        .inline {
+            font-weight: 600;
+            padding: 3px 15px;
+            margin-left: 5px;
+        }
     }
 
     .greeting-div {
@@ -88,34 +96,6 @@
         font-size: calc(35px + 3vmin);
         margin: 0.4em 0 0 0;
         font-weight: 600;
-    }
-
-    .navbox {
-        color: $highlight-color;
-        background: lighten($main-color, 5);
-        margin-left: 5px;
-        padding: 0 15px;
-        transition: all ease-in-out 100ms;
-        transition-property: border-radius, background;
-
-        &:hover {
-            border-radius: 7px;
-            background: lighten($main-color, 10);
-        }
-
-        &:active {
-            background: lighten($main-color, 20);
-        }
-
-        &.name {
-            font-size: calc(60px + 2vmin);
-            letter-spacing: 10px;
-        }
-
-        &.inline {
-            font-weight: 600;
-            padding: 3px 15px;
-        }
     }
 
     .navigation-text {
