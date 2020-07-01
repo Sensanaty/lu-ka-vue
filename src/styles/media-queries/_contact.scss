@@ -1,0 +1,63 @@
+@media screen and (max-width: 870px) {
+    .router-link-exact-active { border: none !important}
+    .contact-wrapper { grid-template: 0.2fr 0.5fr 3fr / 1fr }
+    .social-details { padding: 15px 0 10px 0}
+    .icon-link { font-size: 35px }
+
+    .navlink-wrapper {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex: 1 0 auto;
+        margin: 0;
+        .navbox {
+            font-size: calc(20px + 1vmin);
+            align-self: stretch;
+            margin: 2px 0;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+
+        .form-content-wrapper {
+            margin: 10px 0;
+            min-width: 100%;
+        }
+
+        .message-wrapper {
+            min-width: 100%;
+            min-height: 40%;
+            margin: 30px 0;
+        }
+
+        button { margin-bottom: 10px }
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .form-wrapper {
+        margin-top: 15px;
+        p { font-size: 15px }
+        span { font-size: 15px }
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .form-wrapper {
+        p, span { font-size: 13px }
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .form-wrapper {
+        p { display: none }
+    }
+}
+
+@media screen and (max-width: 301px) {
+    label { font-size: 13px }
+}
