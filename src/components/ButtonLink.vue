@@ -19,7 +19,7 @@
 
 <style scoped lang="scss">
     .navbox {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Roboto", sans-serif;
         color: $highlight-color;
         background: lighten($main-color, 5);
         transition: all ease-in-out 100ms;

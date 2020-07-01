@@ -53,12 +53,12 @@
         .name {
             font-size: calc(60px + 2vmin);
             letter-spacing: 10px;
-            font-family: "Roboto", sans-serif;
             padding: 0 15px;
             margin-left: 5px;
         }
 
         .inline {
+            font-family: "Open Sans", sans-serif;
             font-weight: 600;
             padding: 3px 15px;
             margin-left: 5px;
