@@ -75,7 +75,7 @@
         methods: {
             replaceEmail: function() {
                 const emailLink = document.querySelector(".email-link");
-                emailLink.href = "mailto:" + "sale" + "vic" + "@" + "lu-ka" + ".me";
+                emailLink.href = "mail" + "to:" + "sale" + "vic" + "@" + "lu-ka" + ".me";
             }
         }
     };
