@@ -4,20 +4,6 @@
     .social-details { padding: 15px 0 10px 0}
     .icon-link { font-size: 35px }
 
-    .navlink-wrapper {
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        flex: 1 0 auto;
-        margin: 0;
-        .navbox {
-            font-size: calc(20px + 1vmin);
-            align-self: stretch;
-            margin: 2px 0;
-        }
-    }
-
     form {
         display: flex;
         align-items: center;

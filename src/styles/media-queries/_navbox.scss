@@ -1,0 +1,15 @@
+@media screen and (max-width: 870px) {
+    .navlink-wrapper {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex: 1 0 auto;
+        margin: 0;
+        .navbox {
+            font-size: calc(20px + 1vmin);
+            align-self: stretch;
+            margin: 2px 0;
+        }
+    }
+}
