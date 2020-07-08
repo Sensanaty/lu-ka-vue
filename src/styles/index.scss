@@ -18,5 +18,5 @@ body, #app {
 }
 
 .router-link-exact-active {
-    border: 1px solid darken($highlight-color, 30);
+    box-shadow: 0 0 0 0.5px rgba(225,188,41,1);
 }

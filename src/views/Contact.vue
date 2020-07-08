@@ -1,12 +1,6 @@
 <template>
     <div class="wrapper-div contact-wrapper">
-        <div class="navlink-wrapper">
-            <ButtonLink url="/about" text="ABOUT" />
-            <ButtonLink url="/projects" text="PROJECTS" />
-            <ButtonLink url="/" text="LUKA" />
-            <ButtonLink url="/contact" text="CONTACT" />
-            <ButtonLink url="/rambles" text="RAMBLES" />
-        </div>
+        <NavBar />
         <div class="social-wrapper">
             <div class="social-details">
                 <a href="#" target="_blank" class="icon-link email-link">
@@ -56,7 +50,7 @@
     import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
     import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
     import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-    import ButtonLink from "@/components/ButtonLink";
+    import NavBar from "@/components/NavBar";
 
     library.add(faEnvelope, faGithub, faLinkedinIn);
     Vue.component("font-awesome-icon", FontAwesomeIcon);
@@ -67,7 +61,7 @@
             title: "L U K A | CONTACT"
         },
         components: {
-            ButtonLink
+            NavBar
         },
         mounted() {
             this.replaceEmail();
@@ -86,43 +80,6 @@
         height: 100%;
         display: grid;
         grid-template: 0.2fr 0.7fr 3fr / 1fr;
-    }
-
-    .navlink-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        margin-top: 30px;
-        font-family: "Open Sans", sans-serif;
-
-        .navbox {
-            font-size: calc(26px + 1vmin);
-            min-width: 17%;
-            padding: 8px 10px;
-
-            &:hover {
-                border-radius: 6px;
-            }
-
-            &:nth-child(1) {
-                &:hover {
-                    border-top-left-radius: 0;
-                    border-bottom-left-radius: 0;
-                }
-            }
-
-            &:nth-child(3) {
-                letter-spacing: 8px;
-            }
-
-            &:nth-child(5) {
-                &:hover {
-                    border-top-right-radius: 0;
-                    border-bottom-right-radius: 0;
-                }
-            }
-        }
     }
 
     .social-wrapper {
@@ -248,10 +205,13 @@
             border: none;
             padding: 10px;
             color: white;
-            outline: 2px darken($main-color, 10) solid;
+            box-shadow: -5px 5px 0 0 darken($main-color, 10);
+            outline: 0 $highlight-color solid;
+            transition: all ease-in-out 75ms;
 
             &:focus {
                 outline: 2px $highlight-color solid;
+                box-shadow: none;
             }
         }
 
