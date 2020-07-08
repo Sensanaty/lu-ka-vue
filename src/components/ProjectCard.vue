@@ -1,6 +1,6 @@
 <template>
     <div class="project-card">
-        <div style="display: flex; align-items: center;">
+        <div class="header-details">
             <h1 class="project-title">{{ textTitle }}</h1>
             <div class="stacks">
                 <span class="project-stack" :stack="Object" :class="stack.class">
@@ -41,10 +41,6 @@
             multiple: {
                 type: Boolean,
                 default: false
-            },
-            markdownExists: {
-                type: Boolean,
-                default: false
             }
         }
     };
@@ -60,12 +56,9 @@
         padding: 2% 2% 15px 2%;
         box-shadow: -6px 6px 0px 0px darken($main-color, 5);
 
-        h2:after {
-            color: $secondary-color;
-            content: " ";
-            display: block;
-            border: 3px solid $highlight-color;
-            margin: 0 -2%;
+        .header-details {
+            display: flex;
+            align-items: center;
         }
 
         h1 {
@@ -73,6 +66,18 @@
             font-weight: bold;
             font-size: 2.7em;
             margin: 0;
+        }
+
+        h2 {
+            font-family: "Roboto", sans-serif;
+
+            &:after {
+                color: $secondary-color;
+                content: " ";
+                display: block;
+                border: 3px solid $highlight-color;
+                margin: 0 -2%;
+            }
         }
 
         .stacks {
@@ -150,6 +155,60 @@
             &:hover::after {
                 transform: translate(10px);
                 opacity: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 870px) {
+        .project-card {
+            width: 65%;
+            padding: 3% 5% 20px 5%;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 1.02em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 610px) {
+        .project-card {
+            width: 70%;
+            padding: 3% 7% 20px 7%;
+            margin-top: 4%;
+
+            .header-details {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 496px) {
+        .project-card {
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1em;
+
+                &:after {
+                    margin: 10px -2%;
+                }
+            }
+
+            .project-stack {
+                font-size: 0.9em;
+
+                &.netlify {
+                    display: none;
+                }
             }
         }
     }
