@@ -1,5 +1,7 @@
 # LU-KA
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5be67b50-0e63-42f6-ab64-b26a8cc75cd2/deploy-status)](https://app.netlify.com/sites/jolly-almeida-65c236/deploys)
+
 Personal portfolio of Luka Salević a.k.a [Sensanaty](https://github.com/Sensanaty).
 
 Built on Vue, bootstrapped by `vue-cli 3`, hosted on Netlify.
