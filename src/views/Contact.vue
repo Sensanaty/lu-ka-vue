@@ -205,10 +205,13 @@
             border: none;
             padding: 10px;
             color: white;
-            outline: 2px darken($main-color, 10) solid;
+            box-shadow: -5px 5px 0 0 darken($main-color, 10);
+            outline: 0 $highlight-color solid;
+            transition: all ease-in-out 75ms;
 
             &:focus {
                 outline: 2px $highlight-color solid;
+                box-shadow: none;
             }
         }
 
