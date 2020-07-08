@@ -10,6 +10,11 @@
                     name: 'Rails',
                     class: 'rails'
                 }"
+                :multiple="true"
+                :stack-extra="{
+                    name: 'Heroku',
+                    class: 'heroku'
+                }"
                 projectUrl="https://sp0tlight.herokuapp.com"
             />
             <ProjectCard
@@ -30,7 +35,7 @@
                     name: 'Javascript',
                     class: 'javascript'
                 }"
-                :mulitple="true"
+                :multiple="true"
                 :stack-extra="{
                     name: 'Netlify',
                     class: 'netlify'
