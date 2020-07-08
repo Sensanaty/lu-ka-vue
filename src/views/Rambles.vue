@@ -1,6 +1,5 @@
 <template>
     <div class="wrapper-div rambling-wrapper">
-        <img alt="Vue logo" src="../assets/logo.png" />
         <div>Ramblings</div>
     </div>
 </template>
