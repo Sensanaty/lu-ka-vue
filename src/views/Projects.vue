@@ -172,4 +172,10 @@
             background: lighten($main-color, 15);
         }
     }
+
+    @media screen and (max-width: 496px) {
+        button {
+            font-size: 30px !important;
+        }
+    }
 </style>
