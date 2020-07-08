@@ -21,8 +21,8 @@
         >
             See it in action
         </a>
-        <a target="_blank" class="project-url" v-if="markdownExists" :href="rambleUrl">
-            See the ramble
+        <a target="_blank" class="project-url" v-if="rambleUrl" :href="rambleUrl">
+            See the Ramble
         </a>
     </div>
 </template>
