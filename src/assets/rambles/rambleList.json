@@ -1,0 +1,22 @@
+[
+  {
+    "title": "LU-KA.ME",
+    "subtitle": "The website you're currently on, and its various migrations and numerous changes",
+    "url": "/luka"
+  },
+  {
+    "title": "Steven de Graaf",
+    "subtitle": "A static personal website, built for a client from scratch using good old HTML, CSS and Javascript",
+    "url": "/steven"
+  },
+  {
+    "title": "Spotlight",
+    "subtitle": "A full-fledged MVP designed, written and completed in under 2 weeks",
+    "url": "/spotlight"
+  },
+  {
+    "title": "AirP2P",
+    "subtitle": "My first Rails MVP, and the first time programming within a team",
+    "url": "/airp2p"
+  }
+]
