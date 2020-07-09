@@ -1,6 +1,5 @@
 <template>
     <div class="wrapper-div projects-wrapper">
-        <NavBar />
         <div class="project-card-wrapper">
             <ProjectCard
                 text-title="Spotlight"
@@ -83,7 +82,6 @@
 </template>
 
 <script>
-    import NavBar from "@/components/NavBar";
     import ProjectCard from "@/components/ProjectCard";
     import Spotlight from "@/assets/texts/spotlight.txt";
     import Airp2p from "@/assets/texts/airp2p.txt";
@@ -106,7 +104,6 @@
         },
         components: {
             ProjectCard,
-            NavBar
         },
         data: function() {
             return {
