@@ -58,7 +58,13 @@
     export default {
         name: "Contact",
         metaInfo: {
-            title: "L U K A | CONTACT"
+            title: "L U K A | CONTACT",
+            meta: [
+                {
+                    name: "description",
+                    content: "Get in touch with Luka about any potential projects you might want me to work on"
+                }
+            ]
         },
         components: {
             NavBar

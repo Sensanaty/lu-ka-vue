@@ -95,7 +95,14 @@
     export default {
         name: "Projects",
         metaInfo: {
-            title: "L U K A | PROJECTS"
+            title: "L U K A | PROJECTS",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "LUKA SALEVIĆ - A fullstack web developer skilled in Ruby on Rails, ReactJS, VueJS, and much more"
+                }
+            ]
         },
         components: {
             ProjectCard,

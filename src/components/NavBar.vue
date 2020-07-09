@@ -32,6 +32,7 @@
             font-size: calc(26px + 1vmin);
             min-width: 17%;
             padding: 8px 10px;
+            user-select: none;
 
             &:hover {
                 border-radius: 6px;
