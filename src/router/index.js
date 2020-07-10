@@ -9,6 +9,7 @@ import Projects from "../views/Projects";
 import Contact from "../views/Contact";
 import Rambles from "../views/Rambles";
 import InvalidPage from "../views/InvalidPage";
+import RamblePosts from "@/assets/rambles/rambles.json";
 
 Vue.use(VueRouter);
 Vue.use(VueMeta, {
@@ -44,12 +45,20 @@ const routes = [
     {
         path: "*",
         component: InvalidPage
-    }
+    },
+    ...RamblePosts.map(entry => ({
+        path: `/${entry}`,
+        name: entry,
+        component: () => import(`@/assets/rambles/${entry}.md`)
+    }))
 ];
 
 const router = new VueRouter({
     mode: "history",
-    routes
+    routes,
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    }
 });
 
 export default router;

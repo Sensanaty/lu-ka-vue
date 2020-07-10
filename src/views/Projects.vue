@@ -1,6 +1,5 @@
 <template>
     <div class="wrapper-div projects-wrapper">
-        <NavBar />
         <div class="project-card-wrapper">
             <ProjectCard
                 text-title="Spotlight"
@@ -16,6 +15,7 @@
                     class: 'heroku'
                 }"
                 projectUrl="https://sp0tlight.herokuapp.com"
+                rambleUrl="/spotlight"
             />
             <ProjectCard
                 text-title="AirP2P"
@@ -26,6 +26,7 @@
                     class: 'vue'
                 }"
                 projectUrl="https://airp2p.herokuapp.com"
+                rambleUrl="/airp2p"
             />
             <ProjectCard
                 text-title="Steven de Graaf"
@@ -41,6 +42,7 @@
                     class: 'netlify'
                 }"
                 projectUrl="https://stevendegraaf.com"
+                rambleUrl="/steven"
             />
             <ProjectCard
                 text-title="Izzicup"
@@ -75,15 +77,13 @@
                     name: 'React',
                     class: 'react'
                 }"
-                projectUrl="https://lu-ka.me"
+                rambleUrl="/luka"
             />
         </div>
-        <button class="scroll-button" @click="scrollToTop()">&gt;</button>
     </div>
 </template>
 
 <script>
-    import NavBar from "@/components/NavBar";
     import ProjectCard from "@/components/ProjectCard";
     import Spotlight from "@/assets/texts/spotlight.txt";
     import Airp2p from "@/assets/texts/airp2p.txt";
@@ -95,11 +95,17 @@
     export default {
         name: "Projects",
         metaInfo: {
-            title: "L U K A | PROJECTS"
+            title: "L U K A | PROJECTS",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "LUKA SALEVIĆ - A fullstack web developer skilled in Ruby on Rails, ReactJS, VueJS, and much more"
+                }
+            ]
         },
         components: {
-            ProjectCard,
-            NavBar
+            ProjectCard
         },
         data: function() {
             return {
@@ -110,26 +116,6 @@
                 cash: Cash.split("\n\n"),
                 luka: Luka.split("\n\n")
             };
-        },
-        methods: {
-            scrollToTop() {
-                window.scrollTo(0, 0);
-            },
-            /**
-             * Set the opacity of the button at the bottom of the page to 100 when the user scrolls down 500px
-             */
-            handleScroll() {
-                const btn = document.querySelector(".scroll-button");
-
-                if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                    btn.style.opacity = 100;
-                } else {
-                    btn.style.opacity = 0;
-                }
-            }
-        },
-        created() {
-            window.addEventListener("scroll", this.handleScroll);
         }
     };
 </script>
@@ -150,32 +136,5 @@
         display: flex;
         align-items: center;
         flex-flow: column nowrap;
-    }
-
-    button {
-        font-size: 40px !important;
-        opacity: 0;
-        position: fixed;
-        bottom: 20px;
-        right: 60px;
-        z-index: 99;
-        border: none;
-        outline: none;
-        background: lighten($main-color, 10);
-        padding: 15px;
-        color: $highlight-color;
-        cursor: pointer;
-        transition: all 150ms ease-in-out;
-        transform: rotate(270deg);
-
-        &:hover {
-            background: lighten($main-color, 15);
-        }
-    }
-
-    @media screen and (max-width: 496px) {
-        button {
-            font-size: 30px !important;
-        }
     }
 </style>

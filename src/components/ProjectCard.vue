@@ -13,17 +13,12 @@
         </div>
         <h2 class="project-subtitle">{{ textSubtitle }}</h2>
         <p class="project-description" v-for="line in textDescription" :key="line">{{ line }}</p>
-        <a
-            target="_blank"
-            class="project-url"
-            v-if="projectUrl !== 'https://lu-ka.me' || !projectUrl"
-            :href="projectUrl"
-        >
+        <a target="_blank" class="project-url" v-if="projectUrl" :href="projectUrl">
             See it in action
         </a>
-        <a target="_blank" class="project-url" v-if="rambleUrl" :href="rambleUrl">
+        <router-link class="project-url" v-if="rambleUrl" :to="rambleUrl">
             See the Ramble
-        </a>
+        </router-link>
     </div>
 </template>
 
@@ -195,12 +190,18 @@
             h1 {
                 font-size: 1.6em;
             }
+
             h2 {
                 font-size: 1em;
+                margin-bottom: 0;
 
                 &:after {
                     margin: 10px -2%;
                 }
+            }
+
+            p {
+                margin: 0;
             }
 
             .project-stack {
@@ -210,6 +211,35 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .project-card {
+            .stacks {
+                margin: 0;
+            }
+
+            .header-details {
+                justify-content: center;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 0.9em;
+                margin-top: 5%;
+            }
+        }
+
+        .project-stack {
+            display: none;
+        }
+
+        .project-url {
+            margin-top: 20px;
         }
     }
 </style>

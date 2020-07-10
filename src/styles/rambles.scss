@@ -1,0 +1,112 @@
+.back-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 2% 1% 1% 20%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $highlight-color;
+    font-size: 1.5em;
+    background: lighten($main-color, 5);
+    padding: 5px 15px 5px 10px;
+    flex: 0 1 auto;
+    transition: all 150ms ease-in-out;
+    user-select: none;
+
+    &:hover {
+        background: lighten($main-color, 7);
+        &:before { transform: translate(-3px) }
+    }
+
+    &:active {
+        background: lighten($main-color, 10);
+        &:before { transform: translate(-5px) }
+    }
+
+    &:before {
+        content: "<";
+        margin: 0 7px;
+        transition: all 100ms ease-in-out;
+    }
+}
+
+.ramble-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+        width: 53%;
+        background: lighten($main-color, 5);
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 1.5%;
+        padding: 3%;
+        box-shadow: -6px 6px 0 0 darken($main-color, 10);
+
+        h1, h2 { text-align: center }
+
+        h1 {
+            border-bottom: 3px solid $highlight-color;
+            margin: 1% 0 0 0;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            margin: 2.5% auto 1% auto;
+            border-bottom: 3px solid $highlight-color;
+        }
+
+        p, li {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1em;
+            line-height: 1.467;
+            letter-spacing: 0.02em;
+        }
+
+
+        blockquote, pre {
+            background: $main-color;
+            padding: 2em;
+        }
+
+        pre {
+            font-size: 0.9em;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            border-left: 4px solid $highlight-color;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            &::-webkit-scrollbar {
+                display: block;
+                background: darken($highlight-color, 30);
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $highlight-color;
+                border-radius: 30px;
+            }
+        }
+
+        code {
+            margin-left: 2%;
+            color: darken($secondary-color, 40);
+            user-select: text;
+            cursor: text;
+
+            .hljs-keyword { color: $keyword  }
+            .hljs-number { color: $keyword  }
+            .hljs-attr { color: $attr  }
+            .hljs-comment { color: darken($secondary-color, 60) }
+            .hljs-string { color: $string  }
+            .hljs-built_in { color: red  }
+            .hljs-function { color: $function }
+        }
+    }
+}
+
+@import "./media-queries/rambles";
