@@ -47,7 +47,7 @@
         .ramble-title {
             grid-area: title;
             padding-bottom: 3px;
-            border-bottom: 6px solid $highlight-color;
+            border-bottom: 4px solid $highlight-color;
             font-size: 2.7em;
         }
 
@@ -55,7 +55,7 @@
             font-family: "Josefin Sans", sans-serif;
             grid-area: subtitle;
             margin: 0 35% 0 0;
-            /*align-self: center;*/
+            font-weight: normal;
         }
 
         .arrow {
