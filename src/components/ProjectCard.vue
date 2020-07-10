@@ -16,7 +16,7 @@
         <a target="_blank" class="project-url" v-if="projectUrl" :href="projectUrl">
             See it in action
         </a>
-        <router-link target="_blank" class="project-url" v-if="rambleUrl" :to="rambleUrl">
+        <router-link class="project-url" v-if="rambleUrl" :to="rambleUrl">
             See the Ramble
         </router-link>
     </div>
