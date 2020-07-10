@@ -36,12 +36,12 @@
     align-items: center;
 
     section {
-        width: 55%;
+        width: 53%;
         background: lighten($main-color, 5);
         display: flex;
         flex-flow: column nowrap;
         margin-bottom: 1.5%;
-        padding: 2%;
+        padding: 3%;
         box-shadow: -6px 6px 0 0 darken($main-color, 10);
 
         h1, h2 { text-align: center }
@@ -58,7 +58,13 @@
             border-bottom: 3px solid $highlight-color;
         }
 
-        p { font-size: 1.1em }
+        p, ol li {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.1em;
+            line-height: 1.467;
+            letter-spacing: 0.02em;
+        }
+
 
         blockquote, pre {
             background: $main-color;
@@ -66,11 +72,23 @@
         }
 
         pre {
-            overflow: scroll;
+            overflow-x: auto;
+            overflow-y: hidden;
             display: flex;
             border-left: 4px solid $highlight-color;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
+
+            &::-webkit-scrollbar {
+                display: block;
+                background: darken($highlight-color, 30);
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $highlight-color;
+                border-radius: 30px;
+            }
         }
 
         code {
