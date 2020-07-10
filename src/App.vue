@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <NavBar v-if="renderNav" />
-        <router-link v-if="renderMarkdown" to="/rambles" class="back-link">More Rambles</router-link>
+        <router-link v-if="renderMarkdown" to="/rambles" class="back-link">BACK</router-link>
         <router-view />
         <button class="scroll-button" @click="scrollToTop()">&gt;</button>
     </div>
