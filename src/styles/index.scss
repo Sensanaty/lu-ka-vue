@@ -8,7 +8,6 @@
 html {
     height: 100%;
     font-family: 'Josefin Sans', sans-serif;
-
 }
 
 body, #app {
@@ -20,3 +19,5 @@ body, #app {
 .router-link-exact-active {
     box-shadow: 0 0 0 0.5px rgba(225,188,41,1);
 }
+
+@import "rambles";

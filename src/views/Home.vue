@@ -23,7 +23,14 @@
     export default {
         name: "Home",
         metaInfo: {
-            title: "L U K A"
+            title: "L U K A",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "L U K A SALEVIĆ is A fullstack web developer skilled in Ruby on Rails, ReactJS, VueJS, and much more"
+                }
+            ]
         }
     };
 </script>

@@ -35,7 +35,14 @@
         name: "About",
         components: { ButtonLink },
         metaInfo: {
-            title: "L U K A | ABOUT"
+            title: "L U K A | ABOUT",
+            meta: [
+                {
+                    name: "description",
+                    content:
+                        "Hi, I'm Luka Salević, a fullstack web developer skilled in Ruby, Rails, React, Vue and much more."
+                }
+            ]
         }
     };
 </script>
