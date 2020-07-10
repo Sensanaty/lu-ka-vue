@@ -47,7 +47,7 @@
         .ramble-title {
             grid-area: title;
             padding-bottom: 3px;
-            border-bottom: 6px solid $highlight-color;
+            border-bottom: 4px solid $highlight-color;
             font-size: 2.7em;
         }
 
@@ -55,7 +55,7 @@
             font-family: "Josefin Sans", sans-serif;
             grid-area: subtitle;
             margin: 0 35% 0 0;
-            /*align-self: center;*/
+            font-weight: normal;
         }
 
         .arrow {
@@ -76,5 +76,53 @@
     .ramble-title,
     .ramble-subtitle {
         font-family: "Roboto", sans-serif;
+    }
+
+    @media screen and (max-width: 870px) {
+        .ramble-card {
+            display: flex;
+            flex-flow: column nowrap;
+            margin: 4% 1%;
+            .ramble-title {
+                text-align: center;
+            }
+
+            .ramble-subtitle {
+                margin: 0;
+                text-align: center;
+            }
+
+            .arrow {
+                font-size: 2em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .ramble-card {
+            .ramble-title {
+                font-size: 2em;
+            }
+
+            .ramble-subtitle {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .ramble-card {
+            .ramble-title {
+                font-size: 1.8em;
+            }
+
+            .ramble-subtitle {
+                font-size: 1em;
+            }
+
+            .arrow {
+                font-size: 1.5em;
+            }
+        }
     }
 </style>

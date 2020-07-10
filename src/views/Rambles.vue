@@ -44,4 +44,16 @@
         flex-flow: column nowrap;
         width: 60%;
     }
+
+    @media screen and (max-width: 870px) {
+        .ramble-cards-wrapper {
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .ramble-cards-wrapper {
+            width: 80%;
+        }
+    }
 </style>
