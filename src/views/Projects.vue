@@ -57,7 +57,6 @@
                     name: 'Rails',
                     class: 'rails'
                 }"
-                projectUrl="https://sp0tlight.herokuapp.com"
             />
             <ProjectCard
                 text-title="How's the Cash?"
@@ -67,7 +66,7 @@
                     name: 'React',
                     class: 'react'
                 }"
-                projectUrl="https://sp0tlight.herokuapp.com"
+                projectUrl="https://howsthe.cash"
             />
             <ProjectCard
                 text-title="LU-KA.ME"
