@@ -213,4 +213,33 @@
             }
         }
     }
+
+    @media screen and (max-width: 360px) {
+        .project-card {
+            .stacks {
+                margin: 0;
+            }
+
+            .header-details {
+                justify-content: center;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 0.9em;
+                margin-top: 5%;
+            }
+        }
+
+        .project-stack {
+            display: none;
+        }
+
+        .project-url {
+            margin-top: 20px;
+        }
+    }
 </style>

@@ -52,6 +52,7 @@
         }
 
         .ramble-subtitle {
+            font-family: "Josefin Sans", sans-serif;
             grid-area: subtitle;
             margin: 0 35% 0 0;
             /*align-self: center;*/
@@ -62,7 +63,6 @@
             font-size: 5em;
             align-self: center;
             justify-self: end;
-            margin-bottom: 20px;
             color: $highlight-color;
             transition: all 125ms ease-in-out;
             user-select: none;
