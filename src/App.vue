@@ -44,12 +44,13 @@
             },
 
             /**
-             * Watch route changes, and move the <section> HTML generated from the markdown into a parent wrapper div
-             * when the routes are the markdown components. <br>
-             * Additionally, the extra divs that are leftover after navigating away from the markdown components have
-             * to be deleted due to the way appending the parent divs works.
+             * Watch route changes, then do a few things:
+             * - Move the <section> HTML generated from the markdown into a parent wrapper div when the route points to
+             * the ramble components. <br>
+             * - When navigating from Rambles to the other routes, delete the extra divs that get leftover from the
+             * first step of the method
              */
-            wrapSection() {
+            formatRamble() {
                 if (Rambles.includes(this.$route.name)) {
                     setTimeout(() => {
                         const element = document.querySelector("section");
@@ -74,7 +75,7 @@
             window.addEventListener("scroll", this.handleScroll);
         },
         watch: {
-            "$route.name": "wrapSection"
+            "$route.name": "formatRamble"
         }
     };
 </script>
