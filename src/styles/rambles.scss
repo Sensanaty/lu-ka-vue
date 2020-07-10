@@ -58,7 +58,7 @@
             border-bottom: 3px solid $highlight-color;
         }
 
-        p, ol li {
+        p, li {
             font-family: "Open Sans", sans-serif;
             font-size: 1.1em;
             line-height: 1.467;
@@ -72,6 +72,7 @@
         }
 
         pre {
+            font-size: 0.9em;
             overflow-x: auto;
             overflow-y: hidden;
             display: flex;
@@ -107,3 +108,5 @@
         }
     }
 }
+
+@import "./media-queries/rambles";
