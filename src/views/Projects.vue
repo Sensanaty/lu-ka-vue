@@ -15,6 +15,7 @@
                     class: 'heroku'
                 }"
                 projectUrl="https://sp0tlight.herokuapp.com"
+                rambleUrl="/spotlight"
             />
             <ProjectCard
                 text-title="AirP2P"
@@ -25,6 +26,7 @@
                     class: 'vue'
                 }"
                 projectUrl="https://airp2p.herokuapp.com"
+                rambleUrl="/airp2p"
             />
             <ProjectCard
                 text-title="Steven de Graaf"
@@ -40,6 +42,7 @@
                     class: 'netlify'
                 }"
                 projectUrl="https://stevendegraaf.com"
+                rambleUrl="/steven"
             />
             <ProjectCard
                 text-title="Izzicup"
@@ -74,7 +77,7 @@
                     name: 'React',
                     class: 'react'
                 }"
-                projectUrl="https://lu-ka.me"
+                rambleUrl="/luka"
             />
         </div>
     </div>
