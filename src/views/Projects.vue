@@ -77,7 +77,6 @@
                 projectUrl="https://lu-ka.me"
             />
         </div>
-        <button class="scroll-button" @click="scrollToTop()">&gt;</button>
     </div>
 </template>
 
@@ -103,7 +102,7 @@
             ]
         },
         components: {
-            ProjectCard,
+            ProjectCard
         },
         data: function() {
             return {
@@ -114,26 +113,6 @@
                 cash: Cash.split("\n\n"),
                 luka: Luka.split("\n\n")
             };
-        },
-        methods: {
-            scrollToTop() {
-                window.scrollTo(0, 0);
-            },
-            /**
-             * Set the opacity of the button at the bottom of the page to 100 when the user scrolls down 500px
-             */
-            handleScroll() {
-                const btn = document.querySelector(".scroll-button");
-
-                if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-                    btn.style.opacity = 100;
-                } else {
-                    btn.style.opacity = 0;
-                }
-            }
-        },
-        created() {
-            window.addEventListener("scroll", this.handleScroll);
         }
     };
 </script>
@@ -154,32 +133,5 @@
         display: flex;
         align-items: center;
         flex-flow: column nowrap;
-    }
-
-    button {
-        font-size: 40px !important;
-        opacity: 0;
-        position: fixed;
-        bottom: 20px;
-        right: 60px;
-        z-index: 99;
-        border: none;
-        outline: none;
-        background: lighten($main-color, 10);
-        padding: 15px;
-        color: $highlight-color;
-        cursor: pointer;
-        transition: all 150ms ease-in-out;
-        transform: rotate(270deg);
-
-        &:hover {
-            background: lighten($main-color, 15);
-        }
-    }
-
-    @media screen and (max-width: 496px) {
-        button {
-            font-size: 30px !important;
-        }
     }
 </style>
