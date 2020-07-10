@@ -65,6 +65,14 @@
             letter-spacing: 0.02em;
         }
 
+        a {
+            color: $highlight-color;
+            text-decoration: underline solid $highlight-color;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
 
         blockquote, pre {
             background: $main-color;
