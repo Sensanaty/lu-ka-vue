@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <NavBar v-if="renderNav" />
+        <router-link v-if="renderMarkdown" to="/rambles" class="back-link">Back to Rambles</router-link>
         <router-view />
         <button class="scroll-button" @click="scrollToTop()">&gt;</button>
     </div>
@@ -8,6 +9,7 @@
 
 <script>
     import NavBar from "@/components/NavBar";
+    import Rambles from "@/assets/rambles/rambles.json";
 
     export default {
         name: "App",
@@ -40,10 +42,39 @@
                     btn.style.opacity = 0;
                 }
             },
+
+            /**
+             * Watch route changes, and move the <section> HTML generated from the markdown into a parent wrapper div
+             * when the routes are the markdown components. <br>
+             * Additionally, the extra divs that are leftover after navigating away from the markdown components have
+             * to be deleted due to the way appending the parent divs works.
+             */
+            wrapSection() {
+                if (Rambles.includes(this.$route.name)) {
+                    setTimeout(() => {
+                        const element = document.querySelector("section");
+                        const parent = element.parentNode;
+                        const wrapper = document.createElement("div");
+
+                        wrapper.setAttribute("class", "wrapper-div ramble-wrapper");
+                        parent.replaceChild(wrapper, element);
+                        wrapper.appendChild(element);
+                    }, 2);
+                }
+                const duplicates = document.querySelectorAll(".ramble-wrapper");
+                if (duplicates.length > 1) {
+                    duplicates.forEach((dupe, index) => {
+                        if (index < 1) return;
+                        dupe.remove();
+                    });
+                }
             }
+        },
         created() {
             window.addEventListener("scroll", this.handleScroll);
         },
+        watch: {
+            "$route.name": "wrapSection"
         }
     };
 </script>
