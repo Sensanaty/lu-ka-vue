@@ -47,3 +47,8 @@
 @media screen and (max-width: 301px) {
     label { font-size: 13px }
 }
+
+@media screen and (max-height: 685px) {
+    .navlink-wrapper { margin-bottom: 1% }
+    .form-wrapper { margin-top: 1% }
+}

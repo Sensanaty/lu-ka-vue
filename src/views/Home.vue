@@ -199,4 +199,10 @@
             grid-template-rows: 100px 1fr 1fr;
         }
     }
+
+    @media screen and (max-height: 570px) {
+        .box-letter {
+            font-size: 5em;
+        }
+    }
 </style>
