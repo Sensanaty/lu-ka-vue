@@ -81,7 +81,7 @@
 </script>
 
 <style lang="scss">
-    button {
+    .scroll-button {
         font-size: 40px !important;
         opacity: 0;
         position: fixed;
@@ -103,7 +103,7 @@
     }
 
     @media screen and (max-width: 496px) {
-        button {
+        .scroll-button {
             font-size: 30px !important;
         }
     }
