@@ -149,7 +149,7 @@
 
             &:hover::after {
                 transform: translate(10px);
-                opacity: 100%;
+                opacity: 1;
             }
         }
     }

@@ -37,7 +37,7 @@
                 const btn = document.querySelector(".scroll-button");
 
                 if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                    btn.style.opacity = 100;
+                    btn.style.opacity = 1;
                 } else {
                     btn.style.opacity = 0;
                 }
