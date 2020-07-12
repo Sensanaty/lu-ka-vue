@@ -18,7 +18,12 @@
         },
         computed: {
             renderNav() {
-                return !(this.$route.name === "Home" || this.$route.name === "About" || this.$route.name === "Contact");
+                return !(
+                    this.$route.name === "Home" ||
+                    this.$route.name === "About" ||
+                    this.$route.name === "Contact" ||
+                    !this.$route.name
+                );
             },
 
             renderMarkdown() {

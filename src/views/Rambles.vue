@@ -18,7 +18,12 @@
 
     export default {
         metaInfo: {
-            title: "L U K A | RAMBLES"
+            title: "L U K A | RAMBLES",
+            meta: {
+                name: "description",
+                content:
+                    "While I work, I usually keep a copy of my thoughts as I develop the things that I develop. Feel free to read those long Rambles of mine!"
+            }
         },
         components: {
             RambleCard

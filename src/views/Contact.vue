@@ -41,7 +41,8 @@
             meta: [
                 {
                     name: "description",
-                    content: "Get in touch with Luka about any potential projects you might want me to work on"
+                    content:
+                        "If you had any kind of project whether it was a simple static site or a full fledged webapp, feel free to get in touch with me about it!"
                 }
             ]
         },
