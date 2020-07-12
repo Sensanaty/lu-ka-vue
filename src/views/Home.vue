@@ -28,7 +28,7 @@
                 {
                     name: "description",
                     content:
-                        "L U K A SALEVIĆ is A fullstack web developer skilled in Ruby on Rails, ReactJS, VueJS, and much more"
+                        "Luka is a Fullstack Web & Software Developer skilled in Ruby on Rails, ReactJS, VueJS, and many more technologies beyond those."
                 }
             ]
         }

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>L U K A</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="canonical" href="https://lu-ka.me">
     <meta name="theme-color" content="#E1BC29">
     <meta name="msapplication-navbutton-color" content="#E1BC29">
     <meta name="apple-mobile-web-app-status-bar-style" content="#E1BC29">
@@ -16,7 +18,21 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<%= BASE_URL %>browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>L U K A</title>
+    <!--  TODO: Switch the URL from lu-ka-vue.netlify to lu-ka.me once you migrate domains  -->
+    <meta name="author" content="Luka Salević">
+    <meta property="og:title" content="L U K A">
+    <meta property="og:description" content="A Freelance Fullstack Web & Software Developer skilled in Ruby, Rails, Vue, React & much more.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://lu-ka.me">
+    <meta property="og:site_name" content="L U K A">
+    <meta property="og:image" content="https://lu-ka-vue.netlify.com/SEO_FB.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@lkslvc">
+    <meta name="twitter:creator" content="@lkslvc">
+    <meta name="twitter:title" content="L U K A">
+    <meta name="twitter:description" content="A Freelance Fullstack Web Developer that likes to play around in Rails, Vue, React and beyond">
+    <meta name="twitter:image" content="https://lu-ka-vue.netlify.com/SEO_FB.png">
+    <meta name="twitter:image:alt" content="Luka Salević">
   </head>
   <body>
     <noscript>
@@ -25,8 +41,8 @@
     <div id="app"></div>
     <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
-      <input type="radio" name="email" />
-      <input type="radio" name="number" />
+      <input type="email" name="email" />
+      <input type="tel" name="number" />
       <textarea name="message"></textarea>
     </form>
   </body>

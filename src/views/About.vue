@@ -40,7 +40,7 @@
                 {
                     name: "description",
                     content:
-                        "Hi, I'm Luka Salević, a fullstack web developer skilled in Ruby, Rails, React, Vue and much more."
+                        "Hi! I'm Luka Salević, a Fullstack Web & Software Developer that loves to tinker with and play around in Ruby, Rails, React, Vue and many more things beyond those!"
                 }
             ]
         }
