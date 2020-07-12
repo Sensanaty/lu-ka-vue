@@ -17,29 +17,7 @@
         <div class="form-wrapper">
             <p>Had a project in mind that you'd like to talk about?</p>
             <p>Send me a message at <span>salevic@lu-ka.me</span> or fill in the form below.</p>
-            <form action="post">
-                <div class="form-content-wrapper name-wrapper">
-                    <label for="name-form">Name</label>
-                    <input type="text" id="name-form" placeholder="John Doe" />
-                </div>
-                <div class="form-content-wrapper email-wrapper">
-                    <label for="email-form">Email</label>
-                    <input type="email" id="email-form" placeholder="John@Doe.com (required)" required />
-                </div>
-                <div class="form-content-wrapper number-wrapper">
-                    <label for="number-form">Number</label>
-                    <input type="tel" id="number-form" placeholder="+1 234 567 890" />
-                </div>
-                <div class="form-content-wrapper message-wrapper">
-                    <label for="message-form">What do you want to get in touch about?</label>
-                    <textarea
-                        id="message-form"
-                        placeholder="I want to hire you and give you a lot of money!"
-                        required
-                    ></textarea>
-                </div>
-                <button type="submit">SEND</button>
-            </form>
+            <NetlifyForm />
         </div>
     </div>
 </template>
@@ -51,6 +29,7 @@
     import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
     import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
     import NavBar from "@/components/NavBar";
+    import NetlifyForm from "@/components/NetlifyForm";
 
     library.add(faEnvelope, faGithub, faLinkedinIn);
     Vue.component("font-awesome-icon", FontAwesomeIcon);
@@ -67,7 +46,8 @@
             ]
         },
         components: {
-            NavBar
+            NavBar,
+            NetlifyForm
         },
         mounted() {
             this.replaceEmail();
@@ -139,101 +119,6 @@
             &:hover {
                 color: #faa613;
             }
-        }
-    }
-
-    form {
-        height: 100%;
-        display: grid;
-        grid-template: 1fr 3fr 1fr / 1fr 3fr 1fr;
-        grid-template-areas:
-            "name email number"
-            ". message ."
-            ". button .";
-
-        .form-content-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow: column nowrap;
-        }
-
-        .name-wrapper {
-            grid-area: name;
-            justify-self: flex-end;
-        }
-
-        .email-wrapper {
-            grid-area: email;
-        }
-
-        .number-wrapper {
-            grid-area: number;
-            justify-self: flex-start;
-        }
-
-        .message-wrapper {
-            grid-area: message;
-        }
-
-        button {
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-            letter-spacing: 2px;
-            font-size: calc(17px + 1vmin);
-            line-height: 1;
-            grid-area: button;
-            justify-self: center;
-            align-self: center;
-            padding: 9px 15px;
-            border: none;
-            color: $highlight-color;
-            background: lighten($main-color, 5);
-            cursor: pointer;
-            transition: all ease-in-out 100ms;
-
-            &:hover {
-                background: lighten($main-color, 10);
-            }
-        }
-
-        label {
-            margin: 6px 0;
-        }
-
-        ::placeholder {
-            color: darken(white, 30);
-        }
-
-        input,
-        textarea {
-            background: lighten($main-color, 10);
-            border: none;
-            padding: 10px;
-            color: white;
-            box-shadow: -5px 5px 0 0 darken($main-color, 10);
-            outline: 0 $highlight-color solid;
-            transition: all ease-in-out 75ms;
-
-            &:focus {
-                outline: 2px $highlight-color solid;
-                box-shadow: none;
-            }
-        }
-
-        input {
-            min-width: 25%;
-            min-height: 27%;
-        }
-
-        textarea {
-            min-width: 75%;
-            min-height: 75%;
-            resize: none;
-        }
-
-        sup {
-            font-size: 15px;
         }
     }
 
