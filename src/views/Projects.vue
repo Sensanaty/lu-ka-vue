@@ -99,7 +99,7 @@
                 {
                     name: "description",
                     content:
-                        "LUKA SALEVIĆ - A fullstack web developer skilled in Ruby on Rails, ReactJS, VueJS, and much more"
+                        "Check out the projects that I've been working on! These include my own hobby projects as well as projects I completed for various clients!"
                 }
             ]
         },
