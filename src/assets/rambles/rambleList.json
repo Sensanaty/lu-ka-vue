@@ -5,6 +5,11 @@
     "url": "/luka"
   },
   {
+    "title": "The LU-KA Stack",
+    "subtitle": "A deeper dive into the tech stack that I used when making this site and some of the challenges I encountered along the way",
+    "url": "/luka-stack"
+  },
+  {
     "title": "Steven de Graaf",
     "subtitle": "A static personal website, built for a client from scratch using good old HTML, CSS and Javascript",
     "url": "/steven"
