@@ -101,6 +101,7 @@
         cursor: pointer;
         transition: all 150ms ease-in-out;
         transform: rotate(270deg);
+        user-select: none;
 
         &:hover {
             background: lighten($main-color, 15);

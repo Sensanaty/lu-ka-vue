@@ -108,12 +108,12 @@
         },
         data: function() {
             return {
+                luka: Luka.split("\n\n"),
                 spotlight: Spotlight.split("\n\n"),
                 airp2p: Airp2p.split("\n\n"),
                 izzicup: Izzicup.split("\n\n"),
                 steven: Steven.split("\n\n"),
-                cash: Cash.split("\n\n"),
-                luka: Luka.split("\n\n")
+                cash: Cash.split("\n\n")
             };
         }
     };

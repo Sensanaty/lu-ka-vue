@@ -1,22 +1,27 @@
 [
   {
     "title": "LU-KA.ME",
-    "subtitle": "The website you're currently on, and its various migrations and numerous changes",
+    "subtitle": "The website you're currently on, and a short dive into some of the progress made with it in the past and present.",
     "url": "/luka"
   },
   {
+    "title": "The LU-KA Stack",
+    "subtitle": "A deeper dive into the tech stack that I used when making this site and some of the challenges I encountered along the way.",
+    "url": "/luka-stack"
+  },
+  {
     "title": "Steven de Graaf",
-    "subtitle": "A static personal website, built for a client from scratch using good old HTML, CSS and Javascript",
+    "subtitle": "A static personal website, built for a client from scratch using good old reliable HTML, CSS and Javascript.",
     "url": "/steven"
   },
   {
     "title": "Spotlight",
-    "subtitle": "A full-fledged MVP designed, written and completed in under 2 weeks",
+    "subtitle": "A full-fledged Rails app entirely thought up, created and launched in only 2 short weeks.",
     "url": "/spotlight"
   },
   {
     "title": "AirP2P",
-    "subtitle": "My first Rails MVP, and the first time programming within a team",
+    "subtitle": "My first Rails MVP as well as my first experiences developing software in a team setting with strict deadlines.",
     "url": "/airp2p"
   }
 ]
