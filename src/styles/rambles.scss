@@ -65,6 +65,44 @@
             letter-spacing: 0.02em;
         }
 
+        li {
+            list-style: none;
+
+            code {
+                margin: 0;
+                background: $main-color;
+                padding: 2px 3px;
+                font-size: 0.9em;
+            }
+
+            &:before {
+                content: ">";
+                color: $highlight-color;
+                font-weight: bold;
+                display: inline-block;
+                width: 1.2em;
+                margin-left: -1em;
+            }
+
+            ul li {
+                &:before {
+                    content: ">>";
+                    font-size: 0.8em;
+                    letter-spacing: -1.5px;
+                    width: 1.5em;
+                }
+            }
+        }
+
+        p code {
+            font-size: 1em;
+            font-family: monospace;
+            margin: 0;
+            font-style: italic;
+            background: $main-color;
+            padding: 2px 5px;
+        }
+
         a {
             color: $highlight-color;
             text-decoration: underline solid $highlight-color;
@@ -106,13 +144,13 @@
             user-select: text;
             cursor: text;
 
-            .hljs-keyword { color: $keyword  }
-            .hljs-number { color: $keyword  }
+            .hljs-keyword, .hljs-number, .hljs-attribute { color: $keyword  }
             .hljs-attr { color: $attr  }
             .hljs-comment { color: darken($secondary-color, 60) }
             .hljs-string { color: $string  }
-            .hljs-built_in { color: red  }
-            .hljs-function { color: $function }
+            .hljs-built_in, .hljs-tag, .hljs-name, .hljs-subst .hljs-keyword { color: red  }
+            .hljs-function, .hljs-selector-class { color: $function }
+            .hljs-subst { color: $attr }
         }
     }
 }

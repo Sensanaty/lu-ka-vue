@@ -56,6 +56,7 @@
             grid-area: subtitle;
             margin: 0 35% 0 0;
             font-weight: normal;
+            font-size: 1.3em;
         }
 
         .arrow {
